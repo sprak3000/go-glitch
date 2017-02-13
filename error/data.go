@@ -1,10 +1,6 @@
 package error
 
-import (
-	"fmt"
-
-	"github.com/lib/pq"
-)
+import "fmt"
 
 // UnknownCode is used as the code when a real code could not be found
 const UnknownCode = "UNKNOWN"
@@ -35,14 +31,6 @@ func (d *dataError) Inner() error {
 
 func (d *dataError) Code() string {
 	return d.code
-}
-
-// FromPQ will create a DataError from a postgres error
-func FromPQ(inner error, msg string) DataError {
-	if pqErr, ok := inner.(pq.Error); ok {
-		return &dataError{inner: inner, code: string(pqErr.Code), msg: msg}
-	}
-	return &dataError{inner: inner, code: UnknownCode, msg: msg}
 }
 
 // FromHTTPProblem will create a DataError from an HTTPProblem
