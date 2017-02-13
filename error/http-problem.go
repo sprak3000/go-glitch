@@ -15,5 +15,5 @@ type HTTPProblem struct {
 }
 
 func (h HTTPProblem) Error() string {
-	return fmt.Sprintf("HTTPProblem: [%s] - %s - %s", h.Code, h.Title, h.Detail)
+	return fmt.Sprintf("HTTPProblem: [%d - %s] - %s - %s", h.Status, h.Code, h.Title, h.Detail)
 }
