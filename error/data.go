@@ -13,12 +13,17 @@ type DataError interface {
 	Inner() error
 	// Code returns a specific error code, this is meant to be a machine friendly string
 	Code() string
+	// Wrap will set err as the cause of the error
+	Wrap(err DataError)
+	// GetCause will return the cause of this error
+	GetCause() DataError
 }
 
 type dataError struct {
 	inner error
 	code  string
 	msg   string
+	cause DataError
 }
 
 func (d *dataError) Error() string {
@@ -31,6 +36,14 @@ func (d *dataError) Inner() error {
 
 func (d *dataError) Code() string {
 	return d.code
+}
+
+func (d *dataError) Wrap(err DataError) {
+	d.cause = err
+}
+
+func (d *dataError) GetCause() DataError {
+	return d.cause
 }
 
 // FromHTTPProblem will create a DataError from an HTTPProblem
