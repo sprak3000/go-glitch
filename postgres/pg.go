@@ -5,8 +5,8 @@ import (
 	"github.com/lib/pq"
 )
 
-// FromPQ will convert a lib/pq error into a DataError
-func FromPQ(inner error, msg string) glitch.DataError {
+// ToDataError will convert a lib/pq error into a DataError
+func ToDataError(inner error, msg string) glitch.DataError {
 	if inner == nil {
 		return nil
 	}
