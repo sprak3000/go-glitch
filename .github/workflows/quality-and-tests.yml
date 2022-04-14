@@ -16,7 +16,7 @@ jobs:
       - name: Install gotestsum
         run: make install-gotestsum
       - name: Install revive
-        run: go install github.com/mgechev/revive
+        run: go get -u github.com/mgechev/revive
       # TODO: How to handle the exit code when no problems are found.
 #      - name: Lint the code
 #        run: make lint
