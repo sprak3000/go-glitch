@@ -9,8 +9,8 @@ analyze: lint vet test ## Run lint, vet, and test
 
 .PHONY: lint
 lint: ## Lint the code
-    # TODO: revive seems to give an error exit code even though it doesn't report any problems. How to handle?
-	@revive -config .revive.toml ./... | grep -v vendor
+	# revive returns an exit code of 1 if no issues found. Strike that; reverse it.
+	@! revive -config .revive.toml ./... | grep -v vendor
 
 .PHONY: test
 test: unit-test ## Run the test suite(s).
