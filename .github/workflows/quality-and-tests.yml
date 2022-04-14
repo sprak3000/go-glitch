@@ -33,4 +33,4 @@ jobs:
           CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE_TEST_REPORTER_ID }}
         with:
           coverageLocations: |
-            ${{github.workspace}}/c.out:lcov
+            ${{github.workspace}}/c.out:gocov
