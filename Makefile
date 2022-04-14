@@ -41,7 +41,7 @@ setup-asdf: ## Install Go via asdf
 .PHONY: install-goimports
 install-goimports: ## Install goimports
 	@echo ">>>> Installing goimports"
-	@go get golang.org/x/tools/cmd/goimports
+	@go install golang.org/x/tools/cmd/goimports
 
 .PHONY: install-gotestsum
 install-gotestsum: ## Install gotestsum
