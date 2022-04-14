@@ -6,6 +6,8 @@
 This package is designed to help with handling errors from databases and web services. The `glitch.DataError` structure
 allows the logic layer of your code to use its error code to handle each machine-readable code in a user-friendly way.
 
+Interested in making this library better? Read through our [development guide](docs/development.md).
+
 ## PostgreSQL errors
 
 You can convert a `lib/pq` error into a `glitch.DataError` using `postgres.ToDataError()`.
