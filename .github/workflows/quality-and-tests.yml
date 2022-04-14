@@ -32,5 +32,4 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE_TEST_REPORTER_ID }}
         with:
-          debug: true
           prefix: go-glitch
