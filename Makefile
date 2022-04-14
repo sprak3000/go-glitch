@@ -19,6 +19,13 @@ test: unit-test ## Run the test suite(s).
 unit-test: ## Run the unit tests.
 	@gotestsum --format=standard-verbose -- -run '(?i)unit' ./...
 
+.PHONY: test-with-coverage
+test-with-coverage: unit-test-with-coverage ## Run the test suite(s) and output test coverage data.
+
+.PHONY: unit-test-with-coverage
+unit-test-with-coverage: ## Run the unit tests.
+	@gotestsum --format=standard-verbose -- -run '(?i)unit' ./... -coverprofile=c.out
+
 .PHONY: vet
 vet: ## Verify `go vet` passes.
 	@go vet -mod vendor $(GOFILES)
