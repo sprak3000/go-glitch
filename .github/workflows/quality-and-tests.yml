@@ -26,8 +26,4 @@ jobs:
       - name: Vet the code
         run: make vet
       - name: Run unit tests
-        run: make test-with-coverage
-    - name: Upload test coverage to CodeClimate
-      uses: paambaati/codeclimate-action@v3.0.0
-      env:
-        CC_TEST_REPORTER_ID: ${{secrets.CODE_CLIMATE_TEST_REPORTER_ID}}
+        run: make test
