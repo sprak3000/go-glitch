@@ -22,6 +22,8 @@ jobs:
 #        run: make lint
       - name: go mod tidy
         run: go mod tidy
+      - name: go mod vendor
+        run: go mod vendor
       - name: Vet the code
         run: make vet
       - name: Run unit tests
