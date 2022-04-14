@@ -20,6 +20,8 @@ jobs:
       # TODO: How to handle the exit code when no problems are found.
 #      - name: Lint the code
 #        run: make lint
+      - name: go mod tidy
+        run: go mod tidy
       - name: Vet the code
         run: make vet
       - name: Run unit tests
