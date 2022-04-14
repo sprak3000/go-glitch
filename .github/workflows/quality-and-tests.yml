@@ -33,4 +33,4 @@ jobs:
           CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE_TEST_REPORTER_ID }}
         with:
           debug: true
-          prefix: github.com/sprak3000/go-glitch
+          prefix: go-glitch
