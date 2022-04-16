@@ -7,7 +7,7 @@ import (
 	"github.com/lib/pq"
 	"github.com/stretchr/testify/require"
 
-	"go-glitch/glitch"
+	"github.com/sprak3000/go-glitch/glitch"
 )
 
 func TestUnit_ToDataError(t *testing.T) {

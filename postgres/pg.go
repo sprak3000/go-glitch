@@ -3,7 +3,7 @@ package postgres
 import (
 	"github.com/lib/pq"
 
-	"go-glitch/glitch"
+	"github.com/sprak3000/go-glitch/glitch"
 )
 
 // ToDataError will convert a lib/pq error into a DataError
