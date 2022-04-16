@@ -1,4 +1,4 @@
-module go-glitch
+module github.com/sprak3000/go-glitch
 
 go 1.17
 
