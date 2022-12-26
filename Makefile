@@ -52,7 +52,7 @@ install-goimports: ## Install goimports
 .PHONY: install-gotestsum
 install-gotestsum: ## Install gotestsum
 	@echo ">>>> Installing gotestsum"
-	@go get gotest.tools/gotestsum
+	@go install gotest.tools/gotestsum@latest
 
 .PHONY: asdf-reshim
 asdf-reshim: ## Reshim asdf
