@@ -22,7 +22,11 @@ jobs:
       - name: go mod vendor
         run: go mod vendor
       - name: Lint the code
-        run: make lint
+        uses: docker://morphy/revive-action:v2
+        with:
+          config: .revive.toml
+          path: "./..."
+          exclude: "vendor"
       - name: Vet the code
         run: make vet
       - name: Run unit tests
