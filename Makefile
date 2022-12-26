@@ -9,7 +9,6 @@ analyze: lint vet test ## Run lint, vet, and test
 
 .PHONY: lint
 lint: ## Lint the code
-	# revive returns an exit code of 1 if no issues found. Strike that; reverse it.
 	@! revive -config .revive.toml ./... | grep -v vendor
 
 .PHONY: test
