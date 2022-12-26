@@ -2,6 +2,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/2e89b8a1b90cfdbf67da/maintainability)](https://codeclimate.com/github/sprak3000/go-glitch/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2e89b8a1b90cfdbf67da/test_coverage)](https://codeclimate.com/github/sprak3000/go-glitch/test_coverage)
+![Quality & Tests](https://github.com/github/docs/actions/workflows/quality-and-tests.yml/badge.svg)
 
 This package is designed to help with handling errors from databases and web services. The `glitch.DataError` structure
 allows the logic layer of your code to use its error code to handle each machine-readable code in a user-friendly way.
