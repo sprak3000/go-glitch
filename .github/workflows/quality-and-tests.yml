@@ -26,7 +26,7 @@ jobs:
         with:
           config: .revive.toml
           path: "./..."
-          exclude: "vendor"
+          exclude: "./vendor/..."
       - name: Vet the code
         run: make vet
       - name: Run unit tests
