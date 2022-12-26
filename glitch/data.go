@@ -1,3 +1,4 @@
+// Package glitch provides the DataError type and utilities to convert RFC 7807 errors into a DataError.
 package glitch
 
 import "fmt"

@@ -1,3 +1,4 @@
+// Package postgres provides a way to convert a lib/pq error to a glitch.DataError
 package postgres
 
 import (
